@@ -11,29 +11,35 @@ namespace CharlieHarrop
     {
         [SerializeField] private float horizontalInputValue; // The value of our horizontal input axis.
         [SerializeField] private SpriteRenderer spriteRenderer; // Our character's sprite.
-        [SerializeField] private bool isJumping = false;
 
         // TODO Movement 1/8: Declare a variable for a reference to our 2D rigidbody, for physics stuff.
         private Rigidbody2D rbody2D;
+
         // TODO Movement 2/8: Declare a variable for the speed we can run at in Unity-units-per-second.
         private float runSpeed = 5f;
+
         // TODO Movement 3/8: Declare a variable for the strength of our jump.
         private float jumpHeight = 3f;
+
+        [SerializeField] private bool isJumping;
 
         private void Update()
         {
             // TODO Movement 4/8: Store our horizontal player input value so we can access it later on.
             horizontalInputValue = Input.GetAxisRaw("Horizontal");
+
             // TODO Movement 5/8: Transform our character's position on the X axis. (Reference our stored horizontal input value here!)
             transform.position += new Vector3(horizontalInputValue * runSpeed, 0, 0) * Time.deltaTime;
+
             // TODO Movement 6/8: Check if the player presses the "Jump" button (by default, the space bar on the keyboard).
-
+            
             isJumping = Input.GetButtonDown("Jump");
-
+            
             if (isJumping == true)
             {
                 rbody2D.velocity = Vector2.up * jumpHeight;
             }
+            
             // TODO Movement 7/8: If they do, then add vertical velocity to our rigidbody to make our character "jump"!
 
             // TODO Movement 8/8: Add this script to a game object and make a new prefab from it, and explore the level!
