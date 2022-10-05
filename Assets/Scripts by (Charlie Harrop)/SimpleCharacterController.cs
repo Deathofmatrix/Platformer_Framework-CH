@@ -39,7 +39,19 @@ namespace CharlieHarrop
             {
                 rbody2D.velocity = Vector2.up * jumpHeight;
             }
+
+
+            //flips the characters sprite based on the way he is facing.
+
+            if (horizontalInputValue < 0)
+            {
+                spriteRenderer.flipX = false;
+            }
             
+            else if (horizontalInputValue > 0)
+            {
+                spriteRenderer.flipX = true;
+            }
             // TODO Movement 7/8: If they do, then add vertical velocity to our rigidbody to make our character "jump"!
 
             // TODO Movement 8/8: Add this script to a game object and make a new prefab from it, and explore the level!

@@ -12,7 +12,7 @@ namespace CharlieHarrop
     {
         // TODO Loader 1/4: Declare a string variable for the name of the scene we want to load, which is this scene. (Write in the scene's name in Unity's Inspector.)
         private string sceneTest = "Test Scene";
-        private string pipeworks = "Platformer (The Pipeworks)";
+        // private string pipeworks = "Platformer (The Pipeworks)";
 
         private void LoadScene(string sceneToLoad)
         {

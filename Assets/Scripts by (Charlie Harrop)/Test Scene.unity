@@ -273,7 +273,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 8.5625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInputValue: 0
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1628414721}
   rbody2D: {fileID: 1329701064}
   runSpeed: 5
   jumpHeight: 5
@@ -463,6 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+--- !u!212 &1628414721 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6163263750481970358, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+  m_PrefabInstance: {fileID: 1594125021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3853188408691195327
 PrefabInstance:
   m_ObjectHideFlags: 0
