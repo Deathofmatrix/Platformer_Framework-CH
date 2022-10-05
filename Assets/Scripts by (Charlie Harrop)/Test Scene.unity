@@ -346,6 +346,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInputValue: 0
   spriteRenderer: {fileID: 0}
+  rbody2D: {fileID: 1329701064}
+  runSpeed: 5
+  jumpHeight: 5
+  isJumping: 0
+--- !u!50 &1329701064 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1773068161533247606, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+  m_PrefabInstance: {fileID: 1594125021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329701067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329701055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558ce2a1a59e5c64c800538bfe8158b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593013116
 GameObject:
   m_ObjectHideFlags: 0

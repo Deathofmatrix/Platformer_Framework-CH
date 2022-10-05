@@ -13,16 +13,16 @@ namespace CharlieHarrop
         [SerializeField] private SpriteRenderer spriteRenderer; // Our character's sprite.
 
         // TODO Movement 1/8: Declare a variable for a reference to our 2D rigidbody, for physics stuff.
-        private Rigidbody2D rbody2D;
+        [SerializeField] private Rigidbody2D rbody2D;
 
         // TODO Movement 2/8: Declare a variable for the speed we can run at in Unity-units-per-second.
-        private float runSpeed = 5f;
+        [SerializeField] private float runSpeed = 5f;
 
         // TODO Movement 3/8: Declare a variable for the strength of our jump.
-        private float jumpHeight = 3f;
+        [SerializeField] private float jumpHeight = 5f;
 
         [SerializeField] private bool isJumping;
-
+        
         private void Update()
         {
             // TODO Movement 4/8: Store our horizontal player input value so we can access it later on.
@@ -34,8 +34,8 @@ namespace CharlieHarrop
             // TODO Movement 6/8: Check if the player presses the "Jump" button (by default, the space bar on the keyboard).
             
             isJumping = Input.GetButtonDown("Jump");
-            
-            if (isJumping == true)
+
+            if (isJumping)
             {
                 rbody2D.velocity = Vector2.up * jumpHeight;
             }
