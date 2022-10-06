@@ -33,6 +33,12 @@ namespace CharlieHarrop
             // TODO XP 7/13: Debug out our starting values of our level, XP and current XP threshold.
             Debug.Log("Level: " + currentLevel + " XP: " + currentXP + " Threshold: " +levelUpXP);
 
+
+        }
+
+        private void Update()
+        {
+            //This passivly gans the player XP
             // TODO XP 8/13: Increase the current XP by a random amount between 50 and 100.
             int rndXP = Random.Range(50, 100);
             currentXP = rndXP + currentXP;
@@ -40,11 +46,14 @@ namespace CharlieHarrop
             // TODO XP 9/13: Debug out our current XP.
             Debug.Log("XP: " + currentXP);
 
+            //every level makes the player jump higher and run faster 
             // TODO XP 10/13: Check if our current XP is more than our threshold.
             if (currentXP >= levelUpXP)
             {
-                currentLevel = currentLevel + 1;
-                levelUpXP = currentLevel * 100;
+                currentLevel += 1;
+                levelUpXP = currentLevel * 200000;
+                SimpleCharacterController.jumpHeight += (currentLevel / 2);
+                SimpleCharacterController.runSpeed += (currentLevel / 2);
             }
             // TODO XP 11/13: If it is, then let's increase out level by one.
 
@@ -55,6 +64,7 @@ namespace CharlieHarrop
             // TODO XP Final: Add code comments describing what you hope your code is doing throughout this script.
 
             // TODO XP Bonus: Adjust our character's stats ("runSpeed" and/or "jumpStrength") based on their level. (Hint: You'll need a reference to the SimpleCharacterController script!)
+            
 
         }
     }

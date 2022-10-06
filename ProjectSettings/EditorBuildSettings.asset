@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scripts by (Charlie Harrop)/Test Scene.unity
+    guid: 9a636432ff01143b6a82a668f62a1638
+  - enabled: 1
+    path: Assets/Platformer Framework/Scenes/Platformer (The Pipeworks).unity
+    guid: 6c05979eb9f0ab94ca2f86e868b521a1
   m_configObjects: {}

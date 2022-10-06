@@ -16,13 +16,14 @@ namespace CharlieHarrop
         [SerializeField] private Rigidbody2D rbody2D;
 
         // TODO Movement 2/8: Declare a variable for the speed we can run at in Unity-units-per-second.
-        [SerializeField] private float runSpeed = 5f;
+        [SerializeField] public static float runSpeed = 1f;
 
         // TODO Movement 3/8: Declare a variable for the strength of our jump.
-        [SerializeField] private float jumpHeight = 5f;
+        [SerializeField] public static float jumpHeight = 1f;
 
-        [SerializeField] private bool isJumping;
-        
+        [SerializeField] private bool playerJumping;
+        [SerializeField] private bool isGrounded;
+
         private void Update()
         {
             // TODO Movement 4/8: Store our horizontal player input value so we can access it later on.
@@ -33,9 +34,9 @@ namespace CharlieHarrop
 
             // TODO Movement 6/8: Check if the player presses the "Jump" button (by default, the space bar on the keyboard).
             
-            isJumping = Input.GetButtonDown("Jump");
+            playerJumping = Input.GetButtonDown("Jump");
 
-            if (isJumping)
+            if (playerJumping && isGrounded)
             {
                 rbody2D.velocity = Vector2.up * jumpHeight;
             }
@@ -62,6 +63,23 @@ namespace CharlieHarrop
 
             // TODO Movement Bonus 2: Flip our character's sprite so that it faces left/right if we are moving left/right. (Hint: A SpriteRenderer reference, and changing its FlipX = true/false will help!)
 
+        }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Ground")
+            {
+                isGrounded = true;
+            }
+        }
+
+
+        void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Ground")
+            {
+                isGrounded = false;
+            }
         }
     }
 }
