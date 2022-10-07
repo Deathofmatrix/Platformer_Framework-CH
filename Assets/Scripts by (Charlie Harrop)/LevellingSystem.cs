@@ -18,6 +18,7 @@ namespace CharlieHarrop
         // TODO XP 3/13 Declare a new variable to track the amount of XP required to level-up (our current Level Up Threshold).
         private int levelUpXP;
 
+        [SerializeField] private SimpleCharacterController sCC;
 
         private void Start()
         {
@@ -36,7 +37,7 @@ namespace CharlieHarrop
 
         }
 
-        private void Update()
+        private void FixedUpdate ()
         {
             //This passivly gans the player XP
             // TODO XP 8/13: Increase the current XP by a random amount between 50 and 100.
@@ -51,9 +52,9 @@ namespace CharlieHarrop
             if (currentXP >= levelUpXP)
             {
                 currentLevel += 1;
-                levelUpXP = currentLevel * 200000;
-                SimpleCharacterController.jumpHeight += (currentLevel / 2);
-                SimpleCharacterController.runSpeed += (currentLevel / 2);
+                levelUpXP = currentLevel * 10000;
+                sCC.jumpHeight += currentLevel / 2;
+                sCC.runSpeed += currentLevel / 2;
             }
             // TODO XP 11/13: If it is, then let's increase out level by one.
 

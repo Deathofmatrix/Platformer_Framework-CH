@@ -8,13 +8,11 @@ namespace CharlieHarrop
     /// <summary>
     /// This class holds functionality for scene transition and reloading this scene to restart the game.
     /// </summary>
-    public class SceneLoader : MonoBehaviour
+    public class SceneLoaderPipeworks : MonoBehaviour
     {
         // TODO Loader 1/4: Declare a string variable for the name of the scene we want to load, which is this scene. (Write in the scene's name in Unity's Inspector.)
         [SerializeField] private string sceneToLoad = "Test Scene";
         //private string pipeworks = "Platformer (The Pipeworks)";
-
-        [SerializeField] private SimpleCharacterController simpCharControl;
 
         private void LoadScene(string sceneToLoad)
         {
@@ -29,8 +27,6 @@ namespace CharlieHarrop
             if (collision.tag == "Player")
             {
                 LoadScene(sceneToLoad);
-                simpCharControl.runSpeed = 1f;
-                simpCharControl.jumpHeight = 1f;
             }
             //resetting or changing level brings the player back
 

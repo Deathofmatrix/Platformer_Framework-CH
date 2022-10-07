@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Test Scene
+  simpCharControl: {fileID: 1329701073}
 --- !u!61 &706850912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -530,18 +531,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1773068161533247606, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
   m_PrefabInstance: {fileID: 1594125021}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1329701072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329701055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9ee9bbe453490489143113da86edf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1329701073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +546,8 @@ MonoBehaviour:
   horizontalInputValue: 0
   spriteRenderer: {fileID: 1628414721}
   rbody2D: {fileID: 1329701064}
+  runSpeed: 1
+  jumpHeight: 1
   playerJumping: 0
   isGrounded: 0
 --- !u!1 &1515980219
@@ -591,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Platformer (The Pipeworks)
+  simpCharControl: {fileID: 1329701073}
 --- !u!61 &1515980221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -726,6 +718,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4083863976424314738, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+      propertyPath: sCC
+      value: 
+      objectReference: {fileID: 1329701073}
+    - target: {fileID: 4083863976424314738, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083863976424314738, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
+      propertyPath: simpCharControl
+      value: 
+      objectReference: {fileID: 1329701073}
     - target: {fileID: 6163263750481970358, guid: 66ec9119d732ba146ae50bf8cf7c73d7, type: 3}
       propertyPath: m_FlipX
       value: 1

@@ -16,10 +16,10 @@ namespace CharlieHarrop
         [SerializeField] private Rigidbody2D rbody2D;
 
         // TODO Movement 2/8: Declare a variable for the speed we can run at in Unity-units-per-second.
-        [SerializeField] public static float runSpeed = 1f;
+        [SerializeField] public float runSpeed = 1f;
 
         // TODO Movement 3/8: Declare a variable for the strength of our jump.
-        [SerializeField] public static float jumpHeight = 1f;
+        [SerializeField] public float jumpHeight = 1f;
 
         [SerializeField] private bool playerJumping;
         [SerializeField] private bool isGrounded;

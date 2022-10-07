@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 1055477175}
   - component: {fileID: 1055477174}
   - component: {fileID: 1055477173}
-  - component: {fileID: 1055477172}
+  - component: {fileID: 1055477176}
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -434,19 +434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1055477172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055477171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558ce2a1a59e5c64c800538bfe8158b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: Test Scene
 --- !u!61 &1055477173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -540,6 +527,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055477176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055477171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7107619f4495e44fca455c14b344422b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Test Scene
+  simpCharControl: {fileID: 0}
 --- !u!1 &1204748100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1232,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7394264480018439365, guid: 63a2da37f3a2f33449155db3a3059391, type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
+      value: 5.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394264480018439365, guid: 63a2da37f3a2f33449155db3a3059391, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -1240,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394264480018439365, guid: 63a2da37f3a2f33449155db3a3059391, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[11].second.m_AnimationSpeed
-      value: 5.0000005
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7394264480018439365, guid: 63a2da37f3a2f33449155db3a3059391, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[13].second.m_AnimationSpeed
